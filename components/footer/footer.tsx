@@ -3,8 +3,6 @@ import { Button } from "../ui/button";
 import { footerLinks, shopCategories, socialMediaLinks } from "./footer-link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
-config.autoAddCss = false; // Prevents FontAwesome from adding its own CSS
 
 import {
   faCcVisa,
