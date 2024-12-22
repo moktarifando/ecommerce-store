@@ -42,7 +42,9 @@ export default function CategoryLayout() {
             <ProductCount />
             <SortFilter />
           </div>
-          <GridDisplay />
+          <Suspense fallback={<div>Loading...</div>}>
+            <GridDisplay />
+          </Suspense>
         </div>
       </div>
     </div>
