@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import { usePathname } from "next/navigation";
 
 import BreadCrumb from "@/features/category/component/breadcrumb";
@@ -26,7 +26,13 @@ export default function CategoryLayout() {
       </div>
       <div id="filterSidebar&productCardGrid" className="flex mt-8 mb-4">
         <div className="min-w-[300px] w-[300px] h-[100vh] border flex-shrink-0">
-          <FilterSidebar />
+          <Suspense
+            fallback={
+              <aside className="w-64 bg-white p-4 border-r border-gray-200"></aside>
+            }
+          >
+            <FilterSidebar />
+          </Suspense>
         </div>
         <div id="mainPageProductCardGrid" className="flex-grow">
           <div
