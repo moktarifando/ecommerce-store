@@ -39,7 +39,9 @@ export default function CategoryLayout() {
             id="totalProductFiltered&sortFilter"
             className="flex justify-between pt-2 pb-6"
           >
-            <ProductCount />
+            <Suspense fallback={<div>Loading...</div>}>
+              <ProductCount />
+            </Suspense>
             <SortFilter />
           </div>
           <Suspense fallback={<div>Loading...</div>}>
